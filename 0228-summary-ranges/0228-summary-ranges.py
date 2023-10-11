@@ -1,3 +1,8 @@
+'''
+Cesar Emilio Castaño Marin
+Solution: Summary ranges
+Github username: CesarEmilioC
+'''
 class Solution(object):
     def summaryRanges(self, nums):
         """
