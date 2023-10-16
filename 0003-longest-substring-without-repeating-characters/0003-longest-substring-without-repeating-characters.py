@@ -26,6 +26,7 @@ class Solution(object):
                     contador += 1
                 else:
                     break
+            #We check if we have to update the max_lenght
             if max_lenght < len(substring):
                 max_lenght = len(substring)
         return max_lenght
