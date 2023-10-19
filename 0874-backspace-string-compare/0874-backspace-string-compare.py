@@ -1,22 +1,28 @@
+'''
+Cesar Emilio Castaño Marin
+Solution: Backspace String Compare
+Github Username: CesarEmilioC
+Technique: Eliminate adjacent pairs in string turned into list
+'''
 class Solution(object):
+    #Function to create new string only with the remain characters
+    def eliminateAdjacent(self, word):
+        word = [char for char in word]
+        while "#" in word[1:]:
+            del word[word[1:].index("#"):word[1:].index("#")+2]
+        if len(word) >= 1:
+            if word[0] == "#":
+                del word[0]
+        return word
     def backspaceCompare(self, s, t):
         """
         :type s: str
         :type t: str
         :rtype: bool
         """
-        s = [char for char in s]
-        while "#" in s[1:]:
-            del s[s[1:].index("#"):s[1:].index("#")+2]
-        t = [char for char in t]
-        while "#" in t[1:]:
-            del t[t[1:].index("#"):t[1:].index("#")+2]
-        if len(s) >= 1:
-            if s[0] == "#":
-                del s[0]
-        if len(t) >= 1:
-            if t[0] == "#":
-                del t[0]
+        #Compare words
+        s = self.eliminateAdjacent(s)
+        t = self.eliminateAdjacent(t)
         result = True if s == t else False
         return result
         
