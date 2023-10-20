@@ -1,3 +1,9 @@
+'''
+Cesar Emilio Castaño Marin
+Solution: Linked List Cycle
+Github Username: CesarEmilioC
+Technique: Use two pointers and check if they meet at some point, or the list has an end.
+'''
 # Definition for singly-linked list.
 class ListNode(object):
     def __init__(self, x):
